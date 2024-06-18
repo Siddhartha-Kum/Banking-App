@@ -2,6 +2,8 @@ package com.siddhartha.Banking.service;
 
 import com.siddhartha.Banking.dto.AccountDto;
 
+import java.util.List;
+
 
 public interface AccountService {
 
@@ -9,6 +11,12 @@ public interface AccountService {
 
     AccountDto getAccountById(Long Id);
 
-    AccountDto deposite(Long id, double amount);
+    AccountDto deposit(Long id, double amount);
+
+    AccountDto withdraw(Long id, double amount);
+
+    List<AccountDto> getAllAccounts();
+
+    void deleteAccount(Long id);
 
 }
